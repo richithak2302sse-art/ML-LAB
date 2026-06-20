@@ -1,0 +1,18 @@
+CODE-
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+from sklearn.linear_model import LogisticRegression
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.neighbors import KNeighborsClassifier
+
+X,y=load_iris(return_X_y=True)
+
+X_train,X_test,y_train,y_test=train_test_split(
+…    print(m.__class__.__name__,
+        accuracy_score(y_test,m.predict(X_test)))
+
+OUTPUT-
+LogisticRegression 0.9111111111111111
+DecisionTreeClassifier 0.9555555555555556
+KNeighborsClassifier 0.9555555555555556
