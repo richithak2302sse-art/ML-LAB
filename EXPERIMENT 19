@@ -1,0 +1,15 @@
+CODE-
+import pandas as pd
+from sklearn.naive_bayes import GaussianNB
+
+X=[[25,50000],[35,70000],[45,90000],[20,30000]]
+y=[0,1,1,0]
+
+model=GaussianNB()
+model.fit(X,y)
+
+print("Loan Status:",
+model.predict([[30,60000]]))
+
+OUTPUT-
+Loan Status: [1]
